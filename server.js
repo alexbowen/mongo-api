@@ -5,9 +5,8 @@ var format = require('util').format;
 
 app.get('/api/:type', function(req, res){
 
-	console.log('table', req.param('type'));
-
 	MongoClient.connect('mongodb://127.0.0.1:27017/ttgd', function(err, db) {
+		
 	    if(err) throw err;
 
 	    var collection = db.collection('ttgd');
@@ -17,7 +16,7 @@ app.get('/api/:type', function(req, res){
 
 	    	res.header('Access-Control-Allow-Origin', "*");
 	        res.send(results);
-	        // Let's close the db
+
 	        db.close();
 	    });
 	});
