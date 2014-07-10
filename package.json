@@ -1,0 +1,10 @@
+{
+  "name": "mongo-api",
+  "description": "api layer for apis to get mongo data",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "mongodb": "^1.4.7"
+  }
+}
